@@ -217,7 +217,7 @@ renderSlots();
 document.querySelectorAll(".shift").forEach((button) =>
   button.addEventListener("click", () => {
     selectedShift = button.dataset.shift;
-    selectedTime = slots[selectedShift][1];
+    selectedTime = slots[selectedShift][0];
     document
       .querySelectorAll(".shift")
       .forEach((b) => b.classList.toggle("active", b === button));
