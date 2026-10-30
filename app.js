@@ -133,7 +133,7 @@ const faqs = [
   ],
   [
     "Are Saturday appointments available?",
-    "Yes. Saturday morning appointments are available from 11:00 AM to 2:00 PM; the clinic is closed on Saturday evening.",
+    "Yes. Saturday morning appointments are available from 10:30 AM to 2:00 PM. Evening appointments are also available from 4:00 PM to 8:00 PM.",
   ],
 ];
 document.querySelector("#faq-list").innerHTML = faqs
@@ -183,6 +183,7 @@ document.querySelectorAll("[data-concern]").forEach((button) =>
 
 const slots = {
   morning: [
+    "10:30 AM",
     "11:00 AM",
     "11:30 AM",
     "12:00 PM",
@@ -191,6 +192,8 @@ const slots = {
     "01:30 PM",
   ],
   evening: [
+    "04:00 PM",
+    "04:30 PM",
     "05:00 PM",
     "05:30 PM",
     "06:00 PM",
@@ -200,7 +203,7 @@ const slots = {
   ],
 };
 let selectedShift = "morning",
-  selectedTime = "11:30 AM";
+  selectedTime = "10:30 AM";
 const slotArea = document.querySelector("#time-slots");
 const renderSlots = () => {
   slotArea.innerHTML = slots[selectedShift]
